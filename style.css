@@ -1,0 +1,257 @@
+/* Importation des icônes */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* Pour ne pas cacher le haut de la page sous le header */
+    background-image:  url("image/image-fond.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #121212;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-header {
+    position: fixed; /* Fixe le header en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.7); /* Noir transparent */
+    backdrop-filter: blur(10px); /* Effet flou très moderne */
+    display: flex; /* ACTIVE L'ALIGNEMENT HORIZONTAL */
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Espace les 3 blocs (gauche, centre, droite) */
+    padding: 0 30px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Bloc Gauche */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-icon {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-icon:hover {
+    color: gold; /* Devient doré au survol */
+}
+
+/* Bloc Centre (Barre de recherche) */
+.header-center {
+    flex: 0 1 400px;
+}
+
+.barre-rech {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+.barre-rech:focus-within {
+    border-color: gold;
+}
+
+.barre-rech input {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+}
+
+/* Bloc Droite (Boutons) */
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-signup, .btn-login {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-signup {
+    background: none;
+    color: white;
+}
+
+.btn-login {
+    background-color: white;
+    color: black;
+}
+
+
+.btn-signup:hover, .btn-login:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.05);
+
+
+
+    /* les contenus du page */
+}
+/* Style pour tes titres de section (Sons tendance, etc.) */
+h1, .section-title {
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-left: 40px;
+    /* L'ombre magique pour la lisibilité */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+.content-section {
+    padding: 20px 40px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+.section-title {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+
+}
+.content-section {
+    padding: 20px 40px;
+}
+
+.section-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Pour la lisibilité sur ton fond éclairé */
+}
+
+/* Grille de 5 colonnes pour ressembler à ton image */
+.music-grid {
+    display: flex;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    overflow-x: auto; /* Permet de faire défiler horizontalement si besoin */
+    padding: 20px 10px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+/* Style de la carte */
+.music-card {
+    background-color: #050404; /* Fond très léger */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    flex: 0 0 200px;   
+
+}
+
+.music-card:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* S'éclaircit au survol */
+}
+
+.card-image {
+    position: relative; /* Important pour placer le bouton Play par-dessus */
+    margin-bottom: 12px;
+}
+
+.card-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Image carrée */
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* LE BOUTON PLAY  (Caché par défaut) */
+.play-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: #f3d80f; 
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    opacity: 0; /* Invisible */
+    transform: translateY(10px); /* Un peu plus bas */
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Apparition au survol de la carte */
+.music-card:hover .play-btn {
+    opacity: 1;
+    transform: translateY(0); /* Remonte à sa place */
+}
+
+/* Infos texte */
+.card-info h3 {
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Coupe le texte s'il est trop long */
+}
+p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 5px 0 0;
+}
+/* Le Footer */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8); /* Noir transparent pour laisser voir le fond */
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+}
+
+.main-footer span {
+    color: gold; /* Met vos surnoms en valeur */
+    margin: 0 10px;
+    font-weight: bold;
+}
