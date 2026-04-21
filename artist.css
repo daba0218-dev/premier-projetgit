@@ -71,7 +71,43 @@ audio {
   margin-top: 8px;
   border-radius: 10px;
 }
+body{
+     background-image:  url("image/image-fond2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #121212;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* Le conteneur du lecteur */
+/* Cache les boutons radio en haut de page */
+input[type="radio"] {
+    display: none;
+}
 
+/* Cache toutes les cartes par défaut */
+.player-card {
+    display: none;
+    text-align: center;
+}
+
+/* Affiche la carte correspondant au radio coché */
+#artiste1:checked ~ .all-cards .card1,
+#artiste2:checked ~ .all-cards .card2,
+#artiste3:checked ~ .all-cards .card3 {
+    display: block;
+}
+
+/* --- Stylisation des NOUVEAUX Boutons d'Icônes --- */
 
 /* hide inputs */
 input {
@@ -99,4 +135,70 @@ input {
 #s3:checked ~ .nav label[for="s3"] {
   background: gold;
   transform: scale(1.2);
+}
+/* Conteneur pour aligner horizontalement les boutons et l'audio natif */
+.audio-and-nav {
+    display: flex;
+    justify-content: center; /* Centre le groupe */
+    align-items: center;    /* Aligne verticalement */
+    gap: 30px;              /* Espace entre les boutons et l'audio */
+    margin: 20px 0;
+}
+
+/* Les boutons de navigation circulaires */
+.btn-nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;           /* Taille circulaire */
+    height: 50px;
+    background-color:gold; /* Votre couleur or/jaune d'origine */
+    color: white;          /* Couleur de l'icône */
+    border-radius: 50%;    /* Rond */
+    cursor: pointer;
+    font-size: 24px;       /* Taille de l'icône Unicode */
+    transition: transform 0.2s;
+}
+
+/* Effet de survol pour l'interactivité */
+.btn-nav:hover {
+    transform: scale(1.1);
+    background-color:gold; /* Couleur plus lumineuse au survol */
+}
+
+/* Stylisation de l'audio natif pour qu'il ne prenne pas toute la largeur */
+audio {
+    max-width: 250px; /* Taille réduite et centré */
+}
+
+/* Conservation du cadre or/jaune pour l'image d'artiste */
+.cover {
+    max-width: 100%;
+    border: 3px solid #aa8651; /* Votre bordure or d'origine */
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.rtn{
+    color: gold;
+}
+
+
+/* Le Footer */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8); /* Noir transparent pour laisser voir le fond */
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+}
+
+.main-footer span {
+    color: gold; /* Met vos surnoms en valeur */
+    margin: 0 10px;
+    font-weight: bold;
 }

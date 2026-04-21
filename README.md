@@ -28,6 +28,7 @@ Le projet contient :
 ## Structure du projet
 - index.html → liste des artistes
 - artiste.html →  page lecteur
+- artist.css → pour stylee la page lecteur 
 - style.css → design
 - images/ → contient les images
 - audio/ → contient les sons
