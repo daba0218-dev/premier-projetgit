@@ -1,31 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="artist.css">
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="artist.css">
 </head>
+
 <body>
-    <div class="player">
-    <div class="player-card"> 
-        <img src="image/artist.jpeg" class="cover" alt=""> 
-        <div class="song-info">
-            <h2>Sama xool</h2>
-            <p>Mia guissé, Vj</p>
-            <audio src="sama-xool-clip-officiel.mp3" controls type="audio/mpeg"></audio>
-        </div>   
-         <div class="buttons">
-            <button class="btn-control"><img src="image/précédent.png" alt=""></button>
-            <button class="btn-play"><img src="image/pause.png" alt=""></button>
-            <button class="btn-control"><img src="image/suivant.png" alt=""></button>
-        </div>
+
+<div class="player">
+
+  <!-- Slider control -->
+  <input type="radio" name="slide" id="s1" checked>
+  <input type="radio" name="slide" id="s2">
+  <input type="radio" name="slide" id="'s3">
+
+
+  <!-- Carte slider -->
+  <div class="slider">
+
+    <div class="card">
+      <img src="image/artiste-mia1.jpeg">
+      <h3>SAMA XOOL</h3>
+      <p>Mia guisse</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
     </div>
+
+    <div class="card">
+      <img src="image/jeeba.jpeg">
+      <h3>JEEBA</h3>
+      <p>JE T AIME</p>
+      <div class="audio">
+      <audio controls src="sama-xool-clip-officiel.mp3" with="5px"></audio>
+      </div>
     </div>
-    <a class="rtn" href="index.html">← Retour</a>
+
+    <div class="card">
+      <img src="image/artiste-malienne2.jpeg">
+      <h3>OUMOU SAngare</h3>
+      <p>DIARABI</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/ndakhte.jpeg">
+      <h3>Ndakte</h3>
+      <p>GLOW up</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/lonkomia.jpeg">
+      <h3>Mia GUISSE</h3>
+      <p>LONKOMIA</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/jamen.jpeg">
+      <h3>Jamen</h3>
+      <p>SAMA baby</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artisteaya.jpeg">
+      <h3>AYA NAKAMURA</h3>
+      <p>COMPORTEMENT</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artist-amd.jpeg">
+      <h3>AMD</h3>
+      <p>BABY</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artist-malienne1.jpeg">
+      <h3>OUMOU SAngare</h3>
+      <p>NENE</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artistwally.jpeg">
+      <h3>WALLY SECK</h3>
+      <p>ASSURANCE</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/dadju.jpeg">
+      <h3>DADJU</h3>
+      <p>KING</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artistyous2.jpeg">
+      <h3>YUSSUF NDOUR</h3>
+      <p>SENEGAL</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artistvj.jpeg">
+      <h3>VJ</h3>
+      <p>kaay waay</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artistvivi.jpeg">
+      <h3>VIVIANE</h3>
+      <p>LADY</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artist-dip.jpeg">
+      <h3>DIP</h3>
+      <p>DAKAR</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="image/artistyous.jpeg">
+      <h3>YUSSUF NDOUR</h3>
+      <p> BOSS</p>
+      <audio controls src="sama-xool-clip-officiel.mp3"></audio>
+    </div>
+
+  </div>
+
+  <!-- navigation -->
+  <div class="nav">
+
+  <label for="s1">1</label>
+  <label for="s2">2</label>
+  <label for="s3">3</label>
+
+
 </div>
+    
+  </div>
+
+</div>
+
 </body>
-<footer class="main-footer">
-    <p>© 2026 Green Code👑 | <span>Kya 🔥</span> | <span>Oulay ✨</span> | <span>ndiallou 🌟</span></p>
-</footer>
 </html>
